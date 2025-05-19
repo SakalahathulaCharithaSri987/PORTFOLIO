@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charitha Sri | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #f0cee2, #ffffff);
+      scroll-behavior: smooth;
+      color: #333;
+    }
+    header {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+    header h2 { font-size: 1.2rem; color: #e91e63; }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 120px 20px 60px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .home-content {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      position: relative;
+    }
+
+    .home-content h1 {
+      font-size: 3rem;
+      background: linear-gradient(to right, #e91e63, #9c27b0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .typed {
+      font-size: 1.3rem;
+      margin: 15px 0;
+      color: #444;
+      font-style: italic;
+    }
+
+    /* Move Resume button about 45px down */
+    .btn {
+      padding: 12px 25px;
+      background: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(233, 30, 99, 0.4);
+      transition: all 0.3s ease;
+      margin-top: 45px;  /* increased margin-top */
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #c2185b;
+      transform: scale(1.05);
+    }
+
+    .section-box {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3rem;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .section-box h2 {
+      font-size: 2rem;
+      color: #9c27b0;
+      margin-bottom: 1rem;
+    }
+
+    .section-box p, .section-box li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    form button {
+      background-color: #e91e63;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* Contact icons style */
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 20px;
+    }
+    .contact-icons a {
+      font-size: 1.8rem;
+      color: #9c27b0;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .contact-icons a:hover {
+      color: #e91e63;
+      transform: scale(1.2);
+    }
+
+    /* Glass cards container for Projects & Certifications */
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      width: 250px;
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(233, 30, 99, 0.5);
+      border-color: #e91e63;
+    }
+
+    .glass-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .glass-card h3 {
+      color: #9c27b0;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    /* Fade in animation */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>PORTFOLIO</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="home-content">
+      <h4>"Decoding data and dreaming in dashboards! 📊💭"
+ </h4>
+      <h1>👋Hyyy..!! I'm Charitha Sri Sakalabhathula </h1>
+      <p class="typed"></p>
+      <a href="docs/RESUME.pdf" download class="btn">Download Resume</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-box">
+      <h2>About Me</h2>
+      <p>
+         I’m Charitha Sri, an aspiring Data and Business Analyst with a strong foundation in commerce and technology. Pursuing a Bachelor of Commerce in Computer Applications, I leverage tools like Python, SQL, and Power BI to convert complex data into actionable business insights. With practical experience from internships and projects, I am dedicated to driving data-informed decisions that enhance business performance and foster growth.
+
+
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-box">
+      <h2>Projects</h2>
+      <div class="cards-container">
+        <div class="glass-card">
+          <img src="images/Doctor_ANalysis.png" alt="Doctor_ANalysis" />
+          <h3>Doctor Analysis</h3>
+          <p>Power BI dashboard with filters, KPIs, and doctor performance insights...</p>
+        </div>
+        <div class="glass-card">
+          <img src="images/Revenue_analysis.png" alt="Revenue_analysis" />
+          <h3>Revenue_analysis</h3>
+          <p>Power BI dashboard with KPIs, trend charts, and revenue breakdowns..</p>
+        </div>
+        <div class="glass-card">
+          <img src="images/Purchase_analysis.png" alt="Purchase_analysis" />
+          <h3>Purchase_analysis</h3>
+          <p>Interactive dashboard with purchase patterns, supplier insights, and filters..</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" style="padding: 60px 20px; text-align: center; background: #ffeef5;">
+  <div class="section-box">
+    <h2 style="font-size: 2.5rem; margin-bottom: 30px; color: #9c27b0; font-weight: bold;">Skills</h2>
+    <div class="skills-grid" style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    ">
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Power BI</div>
+      <div class="skill-card">Ms.Excel</div>
+      <div class="skill-card">Statictics</div>
+      <div class="skill-card">Data Analysis</div>
+      <div class="skill-card">Data Wrangling</div>
+      <div class="skill-card">Data Modelling</div>
+      <div class="skill-card">Problem Solving</div>
+      <div class="skill-card">Data Cleaning</div>
+      <div class="skill-card">Story Telling</div>
+      <div class="skill-card">Data Driven</div>
+      <div class="skill-card">Team Work</div>
+      <div class="skill-card">Adaptability</div>
+      <div class="skill-card">Time Management</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skill-card {
+    padding: 15px 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(188, 89, 89, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+</style>
+
+
+
+  <section id="certifications">
+    <div class="section-box">
+      <h2>Certifications</h2>
+      <div class="cards-container">
+        <div class="glass-card">
+          <img src="images/Accenture.png" alt="Data Analysis Job Simulation" />
+          <h3>Data Analysis & Visuvalization Job Simulation</h3>
+          <p>Project scoping, cleaning, modeling, visualization, presentation.</p>
+        </div>
+        <div class="glass-card">
+          <img src="images/Power BI.png" alt="Power BI" />
+          <h3>Power BI By Simple Learn </h3>
+          <p>Project understanding, data prep, Power BI storytelling</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-box">
+      <h2>Contact Me</h2>
+      <div class="contact-icons">
+        <a href="https://www.instagram.com/charithasri987" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/charithasri7/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:charithasri654@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/SakalahathulaCharithaSri987" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+      <form
+  action="https://formspree.io/f/mqaqnrqy"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+    </div>
+  </section>
+
+  <script>
+    new Typed('.typed', {
+      strings: ["Data Analyst", "Business Analyst", "Power BI Expert", "SQL + Python Enthusiast","Data-Driven Problem Solver","Aspiring Data & Business Analyst","Transforming Data into Strategic Insights"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+</body>
+</html>
